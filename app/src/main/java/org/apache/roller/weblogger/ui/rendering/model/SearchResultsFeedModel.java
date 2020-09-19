@@ -224,7 +224,7 @@ public class SearchResultsFeedModel implements Model {
 				}
 			}
 
-			if (categorySet.size() > 0) {
+			if (!categorySet.isEmpty()) {
 				this.categories = categorySet;
 			}
 		} catch (IOException e) {
