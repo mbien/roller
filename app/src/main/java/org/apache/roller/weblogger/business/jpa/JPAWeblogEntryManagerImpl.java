@@ -196,7 +196,7 @@ public class JPAWeblogEntryManagerImpl implements WeblogEntryManager {
             entry.setLocale(entry.getWebsite().getLocale());
         }
         
-        if (entry.getAnchor() == null || entry.getAnchor().trim().equals("")) {
+        if (entry.getAnchor() == null || entry.getAnchor().isBlank()) {
             entry.setAnchor(this.createAnchor(entry));
         }
         
@@ -389,7 +389,7 @@ public class JPAWeblogEntryManagerImpl implements WeblogEntryManager {
         int size = 0;
         StringBuilder queryString = new StringBuilder();
         
-        if (wesc.getTags() == null || wesc.getTags().size()==0) {
+        if (wesc.getTags() == null || wesc.getTags().isEmpty()) {
             queryString.append("SELECT e FROM WeblogEntry e WHERE ");
         } else {
             queryString.append("SELECT e FROM WeblogEntry e JOIN e.tags t WHERE ");
@@ -1064,7 +1064,7 @@ public class JPAWeblogEntryManagerImpl implements WeblogEntryManager {
     @Override
     public boolean getTagComboExists(List tags, Weblog weblog) throws WebloggerException{
         
-        if (tags == null || tags.size() == 0) {
+        if (tags == null || tags.isEmpty()) {
             return false;
         }
         

@@ -168,7 +168,7 @@ public class FeedModel implements Model {
                 params.put("tags", URLUtilities.getEncodedTagsString(tags));
             }
             String category = feedRequest.getWeblogCategoryName();
-            if(category != null && category.trim().length() > 0) {
+            if(category != null && !category.isBlank()) {
                 params.put("cat", URLUtilities.encode(category));
             }  
             if(feedRequest.isExcerpts()) {
@@ -202,7 +202,7 @@ public class FeedModel implements Model {
                 params.put("tags", URLUtilities.getEncodedTagsString(tags));
             }
             String category = feedRequest.getWeblogCategoryName();
-            if(category != null && category.trim().length() > 0) {
+            if(category != null && !category.isBlank()) {
                 params.put("cat", URLUtilities.encode(category));
             }  
             if(feedRequest.isExcerpts()) {
@@ -236,7 +236,7 @@ public class FeedModel implements Model {
                 params.put("tags", URLUtilities.getEncodedTagsString(tags));
             }
             String category = feedRequest.getWeblogCategoryName();
-            if(category != null && category.trim().length() > 0) {
+            if(category != null && !category.isBlank()) {
                 params.put("cat", URLUtilities.encode(category));
             }  
             if(feedRequest.isExcerpts()) {

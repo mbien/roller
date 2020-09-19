@@ -106,6 +106,6 @@ public abstract class RollerPermission extends java.security.Permission {
      * True if permission specifies no actions
      */
     public boolean isEmpty() {
-        return (getActions() == null || getActions().trim().length() == 0);
+        return getActions() == null || getActions().isBlank();
     }
 }

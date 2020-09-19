@@ -117,7 +117,7 @@ public class WeblogBookmarkFolder implements Serializable, Comparable<WeblogBook
     
     public void setId(String id) {
         // Form bean workaround: empty string is never a valid id
-        if (id != null && id.trim().length() == 0) {
+        if (id != null && id.isBlank()) {
             return;
         }
         this.id = id;
