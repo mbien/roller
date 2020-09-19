@@ -67,6 +67,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.navbar = navbar;
     }
 
+    @Override
     public String getId() {
         return id;
     }
@@ -75,6 +76,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.id = id;
     }
 
+    @Override
     public String getName() {
         return name;
     }
@@ -83,6 +85,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.name = name;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
@@ -99,6 +102,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.contents = contents;
     }
 
+    @Override
     public Date getLastModified() {
         return lastModified;
     }
@@ -107,6 +111,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.lastModified = lastModified;
     }
 
+    @Override
     public String getLink() {
         return link;
     }
@@ -115,6 +120,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.link = link;
     }
 
+    @Override
     public boolean isHidden() {
         return hidden;
     }
@@ -123,6 +129,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.hidden = isHidden;
     }
 
+    @Override
     public boolean isNavbar() {
         return navbar;
     }
@@ -131,6 +138,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.navbar = navbar;
     }
 
+    @Override
     public String getOutputContentType() {
         return outputContentType;
     }
@@ -139,11 +147,13 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         this.outputContentType = outputContentType;
     }
     
+    @Override
     public String toString() {
         return (id + "," + name + "," + description + "," + link + "," + 
                 lastModified + "\n\n" + contents + "\n");
     }
 
+    @Override
     public ComponentType getAction() {
         return action;
     }
@@ -156,6 +166,7 @@ public class SharedThemeTemplate implements ThemeTemplate, Serializable {
         return type;
     }
 
+    @Override
     public TemplateRendition getTemplateRendition(RenditionType type) throws WebloggerException {
         return templateRenditionHashMap.get(type);
     }
